@@ -4,45 +4,7 @@
   </div>
   <div class="container-padding">
     r2c2
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Course</th>
-          <th>
-            <div class="btn-group pull-right">
-              <button type="button" class="btn btn-success"(click)="saveStudent()">Save</button>
-              <button type="button" class="btn btn-info" [disabled]="disableAddButton" (click)="addStudent()">Add</button>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let student of studentArray; let i = index">
-          <th *ngIf="student.editMode === false" scope="row">{{ student.id }}</th>
-          <td *ngIf="student.editMode === false">{{ student.firstName }}</td>
-          <td *ngIf="student.editMode === false">{{ student.lastName }}</td>
-          <td *ngIf="student.editMode === false">{{ student.course }}</td>
-
-          <th *ngIf="student.editMode" scope="row">
-            <input [(ngModel)]="student.id" type="text" class="form-control" placeholder="ID">
-          </th>
-          <td *ngIf="student.editMode">
-            <input [(ngModel)]="student.firstName" type="text" class="form-control" placeholder="Firstname">
-          </td>
-          <td *ngIf="student.editMode">
-            <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Lastname">
-          </td>
-          <td *ngIf="student.editMode">
-            <input [(ngModel)]="student.course" type="text" class="form-control" placeholder="Course">
-          </td>
-
-          <td><button type="button" class="btn btn-danger pull-right" (click)="removeStudent(i)">X</button></td>
-        </tr>
-      </tbody>
-    </table>
+    <router-outlet class="main-outlet"></router-outlet>
   </div>
   <div class="container-padding">
     r2c3

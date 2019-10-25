@@ -1,8 +1,16 @@
 .row-one {
     display: grid;
     grid-template-columns: 1fr 5fr 2fr;
+    width: 100%;
 } 
 .row-one {
     background: rgba(43, 216, 207, 0.664);
     height: 100%;
 } 
+.nav-buttons {
+    margin-right: 10px;
+}
+.toolbar{
+    height: 100%;
+    width: 100%;
+}

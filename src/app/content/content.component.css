@@ -24,6 +24,7 @@
     font-size: bold;
 }
 
-.pull-right {
-    float: right;
+
+.main-outlet{
+    display: none;
 }
